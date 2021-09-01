@@ -27,17 +27,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.use(routes);
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/limitless-fjord-97515',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
 
 db.once("open", () => {
   app.listen(PORT, () => {

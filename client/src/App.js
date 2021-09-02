@@ -11,11 +11,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-operation.setContext({
-  headers: {
-    authorization: token ? `Bearer ${token}` : "",
-  },
-});
+// operation.setContext({
+//   headers: {
+//     authorization: token ? `Bearer ${token}` : "",
+//   },
+// });
 
 
 function App() {
